@@ -1,0 +1,16 @@
+{% if list_object %}
+    {% for key, data in list_object.items %}
+        <div>
+            {{ key }}
+            <ul>
+                {% for name, score in data.items %}
+                    <div>
+                        {{ name }} / {{ score }}
+                    </div>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>Not exist.</p>
+{% endif %}
